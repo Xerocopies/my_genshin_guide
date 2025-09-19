@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Персонажи Genshin Impact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background: #0a0a0a;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(20, 20, 20, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-family: 'Georgia', serif;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #ffcb74;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+
+        .characters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .character-card {
+            background: linear-gradient(145deg, #1a1a1a, #151515);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+            border: 1px solid #333;
+        }
+
+        .character-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .character-image {
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .character-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .character-card:hover .character-image img {
+            transform: scale(1.1);
+        }
+
+        .character-info {
+            padding: 20px;
+        }
+
+        .character-name {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-family: 'Georgia', serif;
+        }
+
+        .character-title {
+            font-size: 1rem;
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+
+        .character-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .detail-item i {
+            font-size: 1.2rem;
+        }
+
+        .pyro {
+            color: #ff7b7b;
+        }
+
+        .hydro {
+            color: #7bd4ff;
+        }
+
+        .character-description {
+            margin-top: 15px;
+            color: #ccc;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .character-link {
+            display: block;
+            text-align: center;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #e0e0e0;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: all 0.3s;
+        }
+
+        .character-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+            color: #aaa;
+            border-top: 1px solid #333;
+        }
+
+        @media (max-width: 768px) {
+            .characters-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Персонажи Genshin Impact</h1>
+            <p class="subtitle">Коллекция персонажей из вселенной Тейват</p>
+        </header>
+
+        <div class="characters-grid">
+            <!-- Арлекино -->
+            <div class="character-card">
+                <div class="character-image">
+                    <img src="https://i.pinimg.com/736x/14/a3/c6/14a3c6aa9210eb2373a22f8c2bd1ca62.jpg" alt="Арлекино">
+                </div>
+                <div class="character-info">
+                    <h2 class="character-name">Арлекино</h2>
+                    <p class="character-title">Повелительница Огня, Четвертый из Предвестников Фатуи</p>
+                    
+                    <div class="character-details">
+                        <div class="detail-item">
+                            <i class="fas fa-fire pyro"></i>
+                            <span>Пиро</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Древковое</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Снежная</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-star"></i>
+                            <span>5★</span>
+                        </div>
+                    </div>
+                    
+                    <p class="character-description">
+                        Арлекино - Четвертый из Предвестников Фатуи, также известная как "Повелительница Огня". 
+                        Управляет "Домом Очага" - приютом для сирот в Снежной.
+                    </p>
+                    
+                    <a href="C:\Users\sasha\OneDrive\Desktop\САЙТ ГЕНШИН\Персы\Arlechino.html" class="character-link">Открыть гайд</a>
+                </div>
+            </div>
+
+            <!-- Фурина -->
+            <div class="character-card">
+                <div class="character-image">
+                    <img src="https://i.pinimg.com/736x/69/7d/2f/697d2fb8340c87b2f5ed9f68bb2f0765.jpg" alt="Фурина">
+                </div>
+                <div class="character-info">
+                    <h2 class="character-name">Фурина</h2>
+                    <p class="character-title">Богиня Воды, Владычица Фонтейна</p>
+                    
+                    <div class="character-details">
+                        <div class="detail-item">
+                            <i class="fas fa-tint hydro"></i>
+                            <span>Гидро</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Одноручное</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Фонтейн</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-star"></i>
+                            <span>5★</span>
+                        </div>
+                    </div>
+                    
+                    <p class="character-description">
+                        Фурина является богиней и правительницей региона Фонтейн, известная своей элегантностью и мудростью.
+                        Обожает театр и часто участвует в представлениях.
+                    </p>
+                    
+                    <a href="C:\Users\sasha\OneDrive\Desktop\САЙТ ГЕНШИН\Персы\Furina.html" class="character-link">Открыть гайд</a>
+                </div>
+            </div>
+            
+            <!-- Пустая карточка для демонстрации добавления новых персонажей -->
+            <div class="character-card" style="border: 2px dashed #444; background: rgba(30, 30, 30, 0.5);">
+                <div class="character-image" style="background: #1a1a1a; display: flex; align-items: center; justify-content: center; cursor: pointer;" onclick="window.location.href='https://youtu.be/HIcSWuKMwOw'">
+                    <i class="fas fa-plus" style="font-size: 3rem; color: #666;"></i>
+                </div>
+                <div class="character-info">
+                    <h2 class="character-name">Новый персонаж</h2>
+                    <p class="character-title">Добавьте описание</p>
+                    
+                    <div class="character-details">
+                        <div class="detail-item">
+                            <i class="fas fa-question"></i>
+                            <span>Стихия</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-question"></i>
+                            <span>Оружие</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Регион</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-star"></i>
+                            <span>Редкость</span>
+                        </div>
+                    </div>
+                    
+                    <p class="character-description">
+                        Добавьте описание персонажа здесь.
+                    </p>
+                    
+                    <a href="new_character.html" class="character-link">Добавить гайд</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 Genshin Impact Guides. Данный сайт не affiliated with HoYoverse.</p>
+            <p>Genshin Impact - зарегистрированная торговая марка HoYoverse.</p>
+        </div>
+    </footer>
+
+            </div>
+        </div>
+</body>
+</html>
